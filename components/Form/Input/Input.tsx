@@ -13,7 +13,6 @@ const InputData= styled.input`
   outline-color: orange;
 `
 
-
 export default function Input(props:InputHTMLAttributes<HTMLInputElement>) {
   return (
     <InputData {...props}/>

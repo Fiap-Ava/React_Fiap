@@ -3,6 +3,7 @@ import styles from '../../styles/Header.module.css';
 import { css} from '@emotion/css';
 import styled from '@emotion/styled';
 import Input from '../Form/Input/Input';
+import Button from '../Form/Buttom/Button';
 
 const HeaderPage = styled.header`
   background-color: #e1e1e1;
@@ -13,19 +14,6 @@ const HeaderPage = styled.header`
   justify-content: space-between;
   padding: 0 10%;
 `
-  const Button = styled.button`
-  width: 100px;
-  line-height: 30px;
-  border:none;
-  border-radius: 10px;
-  margin-left: 10px;
-  &:hover{
-    background-color: #ddd;
-    cursor: pointer;
-  }
-`
-
-
 // type UserType = {
 //   email: string;
 //   password: string;
@@ -93,13 +81,12 @@ type HeaderProps = {
     </div>) }
     <div>
       <Input type="text" placeholder="Pesquisar"/>
-      <Button>{props.pesquisar? props.pesquisar:"Search"}</Button>
+      <Button disabled>{props.pesquisar? props.pesquisar:"Search"}</Button>
     </div>
    {/* </header> */}
    </HeaderPage>
   )
 }
-
 
 
 // etapas - componentes.
