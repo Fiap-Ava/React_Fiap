@@ -81,18 +81,18 @@ const handleSubmit = (event: FormEvent<HTMLFormElement>)=>{
 
              <Box sx={{mt:8, display: 'flex',flexDirection: 'column', alignItems: 'center'}}>
                 <Typography component="h1" variant="h5">
-                    Login
+                    Cadastro
                 </Typography>
                 <Box component="form" onSubmit={handleSubmit}>
                     {/* <button onClick={()=>setContador(contador+1)}>Muda o contador</button>
                     <button onClick={()=>setNome(nome.toUpperCase())}>Muda o Nome</button> */}
                  {/*'O State contador vale: ' + contador*/ }
 
-
+    <TextField margin="normal" required  fullWidth id="nome" label="Digite seu nome" name="nome" autoComplete="nome" autoFocus/>
     <TextField margin="normal" required  fullWidth id="email" label="Digite o e-mail" name="email" autoComplete="email" autoFocus/>
     <TextField margin="normal"  required fullWidth id="password" type="password" label="Digite a senha" name="password" autoComplete="current-password" autoFocus/>
-                    <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Lembrar de mim" />
-                    <Button type="submit" fullWidth variant="contained" sx={{mt:3, mb:2}}>Entrar</Button>
+    <TextField margin="normal"  required fullWidth id="password" type="password" label="Confirme sua senha" name="password" autoComplete="current-password" autoFocus/>
+                    <Button type="submit" fullWidth variant="contained" sx={{mt:3, mb:2}}>Cadastrar</Button>
 
                     {error && <Typography color="error">{errorMessage}</Typography>}
 
@@ -100,13 +100,8 @@ const handleSubmit = (event: FormEvent<HTMLFormElement>)=>{
              </Box>
             <Copyright site="www.avanade.com.br" sx={{mt:8, mb: 4}} />
              
-                      {open && <Snackbar open={open} hide={6} message="Usuário autenticado com sucesso...Aguarde..."/>}
+                      {open && <Snackbar open={open} hide={6} message="Usuário cadastrado com sucesso"/>}
         </Container>
     </ThemeProvider>
   )
 }
-
-//tudo no react tem a ver com componetização
-//so posso retornar um componente e não dois
-// as extensões .jsx e .tsx permitem usar o html dentro do javascript
-//next.js facilita o desenvolvimento de aplicações react com server side rendering e outras funcionalidades que facilitam o desenvolvimento de aplicações react 

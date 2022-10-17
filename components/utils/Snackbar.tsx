@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Alert from './alert';
+import Alert from './Alert';
 import {AlertColor, Snackbar as Container} from '@mui/material';
 
 type SnackbarProps = {
