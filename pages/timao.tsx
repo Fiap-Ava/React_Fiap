@@ -13,7 +13,7 @@ type TimaoProps = {
             const autor = data[position].author;
 
             return {
-                frase, autor
+                frase, autorc
             }
         }
 export default function Timao(props:TimaoProps) {
